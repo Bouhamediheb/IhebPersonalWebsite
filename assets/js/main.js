@@ -33,6 +33,7 @@ async function handleSubmit(event) {
       }, 4000);
     });
 }
+
 form.addEventListener("submit", handleSubmit);
 
 // NAVIGATION PANEL
@@ -186,7 +187,7 @@ var typed = new Typed(".type", {
 
 
 // Popup button 
-// Get the modal
+// the modal pop screen
 var modal = document.getElementById("myModal");
 
 // Get the button that opens the modal

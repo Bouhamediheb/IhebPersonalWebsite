@@ -1,59 +1,8 @@
-// Formspree code
-const form = document.getElementById("contact-form");
-
-async function handleSubmit(event) {
-  event.preventDefault();
-  var status = document.getElementById("alert");
-  var data = new FormData(event.target);
-  fetch(event.target.action, {
-    method: form.method,
-    body: data,
-    headers: {
-      Accept: "application/json",
-    },
-  })
-    .then((response) => {
-      status.innerHTML = "Merci.";
-      document.querySelector(".alert_style").style.display = "block";
-
-      // hide alert after 3 seconds
-      setTimeout(function () {
-        document.querySelector(".alert_style").style.display = "none";
-      }, 4000);
-      form.reset();
-    })
-    .catch((error) => {
-      status.innerHTML =
-        "Oops! le service est actuellement hors ligne.";
-      document.querySelector(".alert_style").style.display = "block";
-
-      // hide alert after 3 seconds
-      setTimeout(function () {
-        document.querySelector(".alert_style").style.display = "none";
-      }, 4000);
-    });
-}
-
-form.addEventListener("submit", handleSubmit);
 
 // NAVIGATION PANEL
 let navMenu = document.getElementById("nav-menu"),
   navToggle = document.getElementById("nav-toggle"),
   navClose = document.getElementById("nav-close");
-
-// MENU SHOW
-if (navToggle) {
-  navToggle.addEventListener("click", () => {
-    navMenu.classList.add("show-menu");
-  });
-}
-
-// MENU HIDDEN
-if (navClose) {
-  navClose.addEventListener("click", () => {
-    navMenu.classList.remove("show-menu");
-  });
-}
 
 // REMOVE MENU MOBILE
 const navLink = document.querySelectorAll(".nav_link");

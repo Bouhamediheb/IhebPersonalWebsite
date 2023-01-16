@@ -165,6 +165,7 @@ button {
 .nav_toggle {
   color: var(--title-color);
   font-weight: var(--font-medium);
+  
 }
 
 .nav_logo:hover {
@@ -339,11 +340,12 @@ button {
 .button-quiz {
   background-color: var(--first-color);
   color: #fff;
-  width: 30rem;
+  width: 50%;
   border-radius: 0.5rem;
   font-weight: var(--font-medium);
-  padding: 1rem;
+  padding: 2rem;
   font-size: 1.5rem;
+  margin: 1rem;
 
 }
 
@@ -665,6 +667,7 @@ button {
 /* FOOTER  */
 .footer {
   padding-top: 2rem;
+  width: 100%;
 }
 
 .footer_container {
@@ -804,7 +807,7 @@ button {
   background-color: var(--text-color-light);
 }
 
-/* MEDIA QUERIES */
+/* MEDIA QUERIES RESPONSIVE DESIGN */
 /* For small devices */
 @media screen and (max-width: 350px) {
   .container {
@@ -868,8 +871,11 @@ button {
     grid-template-columns: 0.6fr;
     justify-content: center;
   }
+  .footer{
+    width: 100%;
+  }
 }
-
+/* MEDIUM TO LARGE SCREEN */
 @media screen and (min-width: 768px) {
   .container {
     margin-left: auto;
@@ -991,6 +997,7 @@ button {
 
   .footer_bg {
     padding: 3rem 0 3.5rem;
+    width: 100%;
   }
 
   .footer_links {
@@ -1007,7 +1014,7 @@ button {
   }
 }
 
-/* For large devices */
+/* For large devices & desktop */
 @media screen and (min-width: 1024px) {
 
   .header,
